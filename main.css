@@ -1,7 +1,10 @@
+*{
+    margin:0px;
+    padding:0px;   
+}
 body {
     background-color: blanchedalmond;
     font-family: Arial, Helvetica, sans-serif;
-    margin: -8px;
 }
 
 .f-right {
@@ -19,7 +22,6 @@ body {
 }
 
 .grid-header {
-    margin: 0px;
     display: grid;
     width: 100%;
     grid-template-rows: [row-1-inicio] 50px [row-2-final];
@@ -35,8 +37,6 @@ body {
 
 .grid-header ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -67,7 +67,6 @@ body {
 .bg-green {
     background-color: #4caf50;
     margin-left: 0px;
-    padding: 0px;
 }
 
 .bg-orange {
