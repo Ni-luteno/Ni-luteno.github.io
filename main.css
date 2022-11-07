@@ -10,8 +10,51 @@ footer {
     border: 3px purple solid;
     min-height: 50px;
     margin: 0.5rem;
+    min-width: 400px;
 }
 
 main {
-    min-height: 100px;
+    min-height: 200px;
+}
+
+/* HEADER */
+
+.header-menu {
+    display: flex;
+    height: 3em;
+}
+
+.header-menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+}
+
+.header-menu li {
+    background-color: #444;
+    float: left;
+    overflow: hidden;
+    margin: 0px 20px;
+    padding: 0px 10px;
+}
+
+.header-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+.header-menu li a:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.seccion {
+    min-height: 50px;
+    margin: 0.5rem;
 }
