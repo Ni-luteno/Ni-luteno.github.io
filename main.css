@@ -58,20 +58,6 @@ main>aside {
     margin: 0.5rem;
 }
 
-.seccion70 {
-    /*    border: 2px blueviolet solid; */
-    min-height: 50px;
-    margin: 0.5rem;
-    width:70%;
-}
-.seccion30 {
-    /*    border: 2px blueviolet solid; */
-    min-height: 50px;
-    margin: 0.5rem;
-    width:25%;
-}
-
-
 
 .seccion article {
     /* border: 2px blue solid; */
@@ -150,21 +136,28 @@ main>aside {
 
 /* Dropdown Redes Sociales*/
 
+.seccionDropDown {
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    width: auto;
+    float: left;
+}
+
 .dropdown-content {
     display: none;
-    background-color: rgba(248, 248, 255, 0.83);
+    background-color: blanchedalmond;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-btn {
-    background-color: #555;
+    background-color: #4caf50;
     color: white;
     padding: 12px;
     margin: -8px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-
 }
 
 .dropdown-content a {
@@ -175,7 +168,7 @@ main>aside {
 }
 
 .dropdown:hover .dropdown-btn {
-    background-color: black;
+    background-color:#256f27;
 }
 
 .dropdown:hover .dropdown-content {
@@ -183,7 +176,7 @@ main>aside {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color:blanchedalmond;
 }
 
 /* VARIOS */
