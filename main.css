@@ -1,5 +1,4 @@
 * {
-    /*     padding: 0px; */
     box-sizing: border-box;
 }
 
@@ -26,18 +25,28 @@ body {
 
 main {
     min-height: 200px;
+    overflow: auto;
+    background-color: blanchedalmond;
 }
+
+/*Contenedor gral*/
 
 main>div {
     border: 2px aquamarine solid;
     min-height: 180px;
     margin: 0.5rem;
+    height: auto;
+    width: 65%;
+    float: left;
 }
 
 main>aside {
     border: 2px aquamarine solid;
     min-height: 180px;
+    min-width: 30%;
     margin: 0.5rem;
+    float: left;
+    width: auto;
 }
 
 .seccion {
@@ -52,30 +61,58 @@ main>aside {
     min-height: 20px;
 }
 
-.contenido-lat {
-
-    
+#imgGrande {
+    width: 100%;
 }
+
+.contenido-lat {}
 
 
 /* HEADER */
 
-.header-menu {}
+.header-menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+}
 
-.header-menu ul {}
+.header-menu ul li {
+    max-width: 17%;
+    background-color: #444;
+    float: left;
+    overflow: hidden;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px 20px;
+    padding: 0px 10px;
+    height: 50px;
+}
 
-.header-menu li {}
+.header-menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15.5px 30px;
+    font-size: 1.2rem;
+}
 
-.header-menu li a {}
-
-.header-menu li a:hover {}
-
-
+.header-menu li a:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
 
 .bg-green {
-    background-color: darkolivegreen;
+    background-color: #4caf50;
 }
 
 .bg-orange {
     background-color: coral;
+}
+
+.f-rigth {
+    float: right
 }
