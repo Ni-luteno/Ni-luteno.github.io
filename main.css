@@ -21,7 +21,8 @@ main {
 
 .header-menu {
     display: flex;
-    height: 3em;
+    height: 5%;
+    max-height: 13%;
 }
 
 .header-menu ul {
@@ -37,13 +38,15 @@ main {
 .header-menu li {
     background-color: #444;
     float: left;
+    max-width:25%;
     overflow: hidden;
     margin: 0px 20px;
     padding: 0px 10px;
 }
 
 .header-menu li a {
-    display: block;
+    display: inline-block;
+    width: 100%;
     color: white;
     text-align: center;
     padding: 15px 30px;
@@ -55,6 +58,15 @@ main {
 }
 
 .seccion {
+    border: 2px salmon solid;
     min-height: 50px;
     margin: 0.5rem;
+}
+
+.bg-green {
+    background-color: darkolivegreen;
+}
+
+.bg-orange {
+    background-color: coral;
 }
