@@ -20,13 +20,15 @@ footer {
 
 body {
     background-color: blanchedalmond;
+    background-image: url(/Gatitos/gato-jugando-con-una-flor_3840x2160_xtrafondos.com.jpg);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 main {
+    background: rgb(255, 245, 229);
+    background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%);
     min-height: 200px;
     overflow: auto;
-    background-color: blanchedalmond;
 }
 
 /*Contenedor gral*/
@@ -65,7 +67,7 @@ main>aside {
     width: 100%;
 }
 
-.contenido-lat {}
+.contenido-div {}
 
 
 /* HEADER */
@@ -81,7 +83,7 @@ main>aside {
 }
 
 .header-menu ul li {
-    max-width: 17%;
+    
     background-color: #444;
     float: left;
     overflow: hidden;
@@ -104,6 +106,42 @@ main>aside {
 .header-menu li a:hover {
     background-color: rgba(0, 0, 0, 1);
 }
+
+/* Cajas primer Div */
+
+.fondo-inicio {
+    background-image: url(https://placekitten.com/500/500);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.traslucid {
+    border-radius: 5px;
+    background-color: rgba(248, 248, 255, 0.33);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.box {
+    padding: 10px 15px;
+    margin: 10px 15px;
+    width: 23%;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.box:hover {
+    scale: 1.05 1.05;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+p.titulo {
+    font-size: x-large;
+}
+
+
+/* VARIOS */
 
 .bg-green {
     background-color: #4caf50;
