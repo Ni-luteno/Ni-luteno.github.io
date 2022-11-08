@@ -68,6 +68,10 @@ main>aside {
 
 /* HEADER */
 
+header {
+    height: 64px;
+}
+
 .header-menu ul {
     list-style-type: none;
     overflow: hidden;
@@ -87,7 +91,7 @@ main>aside {
     text-align: center;
     margin: 0px 20px;
     padding: 0px 10px;
-    height: 50px;
+    height: 64px;
     background: transparent;
 }
 
@@ -96,7 +100,8 @@ main>aside {
     color: white;
     text-align: center;
     text-decoration: none;
-    padding: 15.5px 30px;
+    height: 64px;
+    padding: 17.5px 30px;
     font-size: 1.2rem;
 }
 
@@ -168,7 +173,7 @@ main>aside {
 }
 
 .dropdown:hover .dropdown-btn {
-    background-color:#256f27;
+    background-color: #256f27;
 }
 
 .dropdown:hover .dropdown-content {
@@ -176,7 +181,7 @@ main>aside {
 }
 
 .dropdown-content a:hover {
-    background-color:blanchedalmond;
+    background-color: blanchedalmond;
 }
 
 /* VARIOS */
