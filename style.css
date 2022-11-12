@@ -187,12 +187,17 @@ header {
 /* Carrousel */
 
 .contenedorCarrousel {
-
+    display: flex;
+    justify-content: center;
+    padding: 50px;
     width: 100%;
     position: relative;
     height: 780px;
+}
 
-
+.img-carrousel{
+    border-radius: 30px;
+    box-shadow: 10px 10px 35px black;
 }
 
 .boton {

@@ -1,4 +1,4 @@
-var imagenes = ['Carrousel/img1.webp', 'Carrousel/img2.webp', 'Carrousel/img3.webp', 'Carrousel/img4.webp', 'Carrousel/img5.webp', 'Carrousel/img6.webp', 'Carrousel/img7.webp'],
+var imagenes = ['Carrousel/img1.webp', 'Carrousel/img2.webp', 'Carrousel/img3.webp', 'Carrousel/img4.webp', 'Carrousel/img5.webp', 'Carrousel/img6.webp', 'Carrousel/img7.webp', 'Carrousel/img8.webp'],
     cont = 0;
 function carrousel(contenedorCarrousel) {
 
