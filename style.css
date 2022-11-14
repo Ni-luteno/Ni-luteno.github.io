@@ -5,6 +5,7 @@
 html {
     font-size: 1rem;
     height: 100%;
+    background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%);
 }
 
 
@@ -16,19 +17,17 @@ footer {
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
+
 }
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: blanchedalmond;
 }
 
 main {
     margin: 0 -8px;
     min-height: 200px;
     overflow: auto;
-    background: rgb(255, 245, 229);
-    background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%);
 
 }
 
@@ -131,6 +130,11 @@ header {
     align-items: center;
     justify-content: space-evenly;
     min-height: 350px;
+}
+
+.contenido-div {
+    background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%);
+
 }
 
 .traslucid {
