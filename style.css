@@ -85,6 +85,7 @@ header {
 }
 
 .header-menu ul {
+    z-index: 2;
     list-style-type: none;
     overflow: hidden;
     position: fixed;
