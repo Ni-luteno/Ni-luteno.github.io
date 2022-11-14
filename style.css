@@ -112,7 +112,7 @@ header {
 /* Cajas primer Div */
 
 .fondo-inicio {
-    background-image: url(https://placekitten.com/500/500);
+    background-image: url(Carrousel/fondo1.webp);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -195,7 +195,7 @@ header {
     height: 780px;
 }
 
-.img-carrousel{
+.img-carrousel {
     border-radius: 30px;
     box-shadow: 10px 10px 35px black;
 }
