@@ -13,7 +13,7 @@ body,
 header,
 main,
 footer {
-         border: 3px purple solid; 
+    border: 3px purple solid;
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
@@ -38,7 +38,7 @@ footer {
 /*Contenedor gral*/
 
 main>div {
-        border: 2px aquamarine solid; 
+    border: 2px aquamarine solid;
     min-height: 180px;
     margin: 0rem;
     height: auto;
@@ -47,7 +47,7 @@ main>div {
 }
 
 main>aside {
-     border: 2px aquamarine solid; 
+    border: 2px aquamarine solid;
     min-height: 180px;
     min-width: 30%;
     margin: 0.5rem;
@@ -56,16 +56,23 @@ main>aside {
 }
 
 .seccion {
-      border: 2px blueviolet solid;
+    border: 2px blueviolet solid;
     min-height: 50px;
     margin: 0.5rem;
 }
 
 
 .seccion article {
-   border: 2px blue solid; 
+    border: 2px blue solid;
     margin: 0.5rem;
     min-height: 20px;
+}
+
+.adopcion {
+    border: 2px blueviolet solid;
+    min-height: 50px;
+    margin: 0.5rem;
+    display: flex;
 }
 
 .tituloIntermedio {
