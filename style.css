@@ -13,7 +13,7 @@ body,
 header,
 main,
 footer {
-    border: 3px purple solid;
+    /* border: 3px purple solid; */
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
@@ -35,10 +35,14 @@ footer {
     min-height: 140px;
 }
 
+footer div {
+    font-size: 12px;
+}
+
 /*Contenedor gral*/
 
 main>div {
-    border: 2px aquamarine solid;
+    /* border: 2px aquamarine solid; */
     min-height: 180px;
     margin: 0rem;
     height: auto;
@@ -47,7 +51,7 @@ main>div {
 }
 
 main>aside {
-    border: 2px aquamarine solid;
+    /* border: 2px aquamarine solid; */
     min-height: 180px;
     min-width: 30%;
     margin: 0.5rem;
@@ -56,24 +60,18 @@ main>aside {
 }
 
 .seccion {
-    border: 2px blueviolet solid;
+    /* border: 2px blueviolet solid; */
     min-height: 50px;
     margin: 0.5rem;
 }
 
 
 .seccion article {
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     margin: 0.5rem;
     min-height: 20px;
 }
 
-.adopcion {
-    border: 2px blueviolet solid;
-    min-height: 50px;
-    margin: 0.5rem;
-    display: flex;
-}
 
 .tituloIntermedio {
     display: flex;
@@ -82,6 +80,50 @@ main>aside {
 
 .tituloIntermedio h1 {
     margin: 16px;
+}
+
+
+/* Seccion Adopcion */
+
+.adopcion .boton {
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+    line-height: 0px;
+    border-radius: 50%;
+    background-image: url(Gatitos/icons8-perfil-de-gato-100.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px rgb(255, 255, 255, .6);
+    -webkit-transition: all .3% ease;
+    -o-transition: all .3% ease;
+    transition: all .3% ease;
+}
+
+.adopcion a {
+    text-decoration: none;
+    position: relative;
+    /* border: 2px blue solid; */
+    min-height: 100px;
+    min-width: 100px;
+    align-self: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.adopcion article {
+    min-width: 800px;
+}
+
+.adopcion img:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
 }
 
 /* HEADER */
@@ -166,9 +208,8 @@ header {
 /* Dropdown Redes Sociales*/
 
 .seccionDropDown {
-    min-height: 100px;
+    min-height: 70px;
     margin: 0.5rem;
-    height: auto;
     width: auto;
     float: left;
 
@@ -267,10 +308,19 @@ header {
     background-color: coral;
 }
 
-.f-rigth {
+.f-right {
     float: right
 }
 
 .f-left {
     float: left;
+}
+
+.flex {
+    display: flex;
+}
+
+.centrado {
+    justify-content: center;
+    align-items: center;
 }
