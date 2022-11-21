@@ -315,7 +315,7 @@ header {
     background-color: bisque;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 10px 10px 35px black;
+    box-shadow: 5px 5px 25px black;
 }
 
 .contacto input.error,
@@ -332,7 +332,7 @@ textarea.error {
     padding: 12px;
     background-color: bisque;
     border-radius: 10px;
-    box-shadow: 10px 10px 35px black;
+    box-shadow: 5px 5px 25px black;
     resize: none;
     min-width: 350px;
     min-height: 300px;
