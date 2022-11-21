@@ -154,6 +154,7 @@ header {
     padding: 0px 10px;
     height: 64px;
     background: transparent;
+    border-radius: 2px;
 }
 
 .header-menu ul li a {
@@ -168,6 +169,10 @@ header {
 
 .header-menu li a:hover {
     background-color: rgba(0, 0, 0, 1);
+}
+
+.header-logo {
+    border-radius: 100%;
 }
 
 /* Cajas primer Div */
@@ -296,6 +301,40 @@ header {
 .adelante {
     right: 2%;
     top: calc(50% - 70px);
+}
+
+/* FORM CONTACTO */
+
+.contacto {
+    justify-content: center;
+}
+
+.contacto input {
+    min-width: 350px;
+    min-height: 30px;
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 35px black;
+}
+
+.contacto .submit:hover {
+    background-color: black;
+    color: white;
+}
+
+.contacto textarea {
+    padding: 12px;
+    background-color: bisque;
+    border-radius: 10px;
+    box-shadow: 10px 10px 35px black;
+    resize: none;
+    min-width: 350px;
+    min-height: 300px;
+}
+
+.contacto label {
+    display: block;
 }
 
 /* VARIOS */

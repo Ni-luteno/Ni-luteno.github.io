@@ -25,4 +25,99 @@
             </ul>
         </div>
     </header>
+
+
+    <div class="tituloIntermedio">
+        <u>
+            <h2>Dejanos tu mensaje</h2>
+        </u>
+
+    </div>
+    <section class="seccion contacto flex">
+
+        <form onsubmit="return validar()" id="form-contacto">
+
+            <label for="nombre">Nombre: </label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="email">Correo Electronico: </label><br>
+            <input type="text" id="email"><br><br>
+            <label for="mensaje">¡Dejanos tu mensaje!</label><br>
+            <textarea name="mensaje" id="mensaje" cols="30"
+                rows="10">¡Hola! Quisiera adoptar a uno de sus gatos</textarea><br><br>
+            <input class="submit" type="submit" value="Enviar">
+        </form>
+
+
+    </section>
+
+
+    <footer>
+        <hr>
+        <article>
+            <div class="seccionDropDown f-right">
+                <div class="dropdown f-right">
+                    <button class="dropdown-btn"> ¡Seguinos!</button>
+                    <div class="dropdown-content">
+                        <a href="https://www.facebook.com/" target="_blank"><img
+                                src="IconsRedesSociales/icons8-facebook-50.png" alt=""> </a>
+                        <a href="https://twitter.com/home" target="_blank"><img
+                                src="IconsRedesSociales/icons8-twitter-50.png" alt=""> </a>
+                        <a href="https://www.instagram.com/" target="_blank"><img
+                                src="IconsRedesSociales/icons8-instagram-50.png" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+            <img class="f-right" src="Gatitos/icons8-trasero-de-gato-100.png" alt="">
+        </article>
+
+        <div class="flex centrado">
+            <img src="IconsRedesSociales/icons8-copyright-all-rights-reserved-96.png" alt="">
+            2022-3022 DMICHIS S.A.
+        </div>
+
+        <div class="flex f-left">
+            <p style="margin:12px ;">Política de privacidad</p>
+            <p style="margin:12px ;">Términos y condiciones</p>
+        </div>
+        <hr>
+    </footer>
 </body>
+<script>
+    const formContacto = document.getElementById('form-contacto');
+    function validar() {
+        let sinError = true;
+        let nombre = document.getElementById('nombre');
+        let email = document.getElementById('email');
+        let mensaje = document.getElementById('mensaje');
+
+        nombre.classList.remove("error");
+        mensaje.classList.remove("error");
+        email.classList.remove("error");
+        if (nombre.value == "") {
+            sinError = false;
+            alert('Por favor ingrese un nombre para comunicarnos con usted');
+            nombre.classList.add("error");
+            nombre.focus();
+        }
+        if (email.value.trim() == "") {
+            sinError = false;
+            alert('Ingrese una direccion de email valida');
+            email.classList.add("error");
+            email.focus();
+            email.style
+        }
+        if (mensaje.value.trim() == "") {
+            sinError = false;
+            alert('Por favor ingrese un mensaje para comunicarnos con usted');
+            mensaje.classList.add("error");
+            mensaje.focus();
+        }
+        if (sinError) {
+            alert('Muchas gracias por su consulta, responderemos a la brevedad.\n¡Que tenga miau buenos días!')
+        }
+        return sinError;
+    }
+</script>
+
+</html>
