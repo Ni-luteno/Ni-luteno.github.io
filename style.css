@@ -318,6 +318,11 @@ header {
     box-shadow: 10px 10px 35px black;
 }
 
+.contacto input.error,
+textarea.error {
+    border: 1px solid red;
+}
+
 .contacto .submit:hover {
     background-color: black;
     color: white;
