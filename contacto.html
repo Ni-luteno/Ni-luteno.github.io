@@ -35,7 +35,7 @@
     </div>
     <section class="seccion contacto flex">
 
-        <form onsubmit="return validar()" id="form-contacto">
+        <form onsubmit="return validar()">
 
             <label for="nombre">Nombre: </label><br>
             <input type="text" id="nombre" name="nombre"><br><br>
@@ -84,7 +84,6 @@
     </footer>
 </body>
 <script>
-    const formContacto = document.getElementById('form-contacto');
     function validar() {
         let sinError = true;
         let nombre = document.getElementById('nombre');
@@ -100,13 +99,21 @@
             nombre.classList.add("error");
             nombre.focus();
         }
-        if (email.value.trim() == "") {
+
+        let arroba = /@/;
+        let puntocom = /.com/;
+        let puntoedu = /.edu/;
+        let puntonet = /.net/;
+        let puntoar = /.ar/;
+
+        if (email.value.trim() == "" || !arroba.test(email.value) || !puntocom.test(email.value) && !puntonet.test(email.value) && !puntoedu.test(email.value) && !puntoar.test(email.value)) {
             sinError = false;
             alert('Ingrese una direccion de email valida');
             email.classList.add("error");
             email.focus();
             email.style
         }
+
         if (mensaje.value.trim() == "") {
             sinError = false;
             alert('Por favor ingrese un mensaje para comunicarnos con usted');
