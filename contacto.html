@@ -37,14 +37,26 @@
 
         <form onsubmit="return validar()">
 
-            <label for="nombre">Nombre: </label><br>
+            <label for="nombre">Nombre: </label>
+            <br>
+            <div id="divErrorNom">
 
-            <label id="lbErrorNom" for="">a</label>
+            </div><br>
 
             <input type="text" id="nombre" name="nombre"><br><br>
             <label for="email">Correo Electronico: </label><br>
+            <div id="divErrorMail">
+
+            </div>
+            <br>
+
             <input type="text" id="email"><br><br>
             <label for="mensaje">¡Dejanos tu mensaje!</label><br>
+            <div id="divErrorMens">
+
+            </div>
+            <br>
+
             <textarea name="mensaje" id="mensaje" cols="30"
                 rows="10">¡Hola! Quisiera adoptar a uno de sus gatos</textarea><br><br>
             <input class="submit" type="submit" value="Enviar">
@@ -92,40 +104,46 @@
         let nombre = document.getElementById('nombre');
         let email = document.getElementById('email');
         let mensaje = document.getElementById('mensaje');
-        let lbErrorNom = document.getElementById('lbErrorNom');
-/*        let listaMensajes = document.getElementById('ltaMsjs');
- */       listaErrores.innerHTML = '';
+        let divErrorNom = document.getElementById('divErrorNom');
+        let divErrorMail = document.getElementById('divErrorMail');
+        let divErrorMens = document.getElementById('divErrorMens');
 
+        divErrorMail.innerHTML = "";
+        divErrorNom.innerHTML = "";
+        divErrorMens.innerHTML = "";
         nombre.classList.remove("error");
         mensaje.classList.remove("error");
         email.classList.remove("error");
+
         if (nombre.value == "") {
             sinError = false;
-            /*    let item = document.createElement("li");
-                  item.innerText('Ingrese un nombre.');
-                listaErrores.appendChild(item);*/
-            lbErrorNom.innerHTML = "Ingrese un nombre";
+            let item = document.createElement("li");
+            divErrorNom.appendChild(item);
+            item.innerText = "Ingrese un nombre.";
             console.log("Nombre invalido");
             nombre.classList.add("error");
+            nombre.focus();
         }
 
         let valMail = /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
         if (!valMail.test(email.value)) {
             sinError = false;
-      /*      let item = document.createElement("li");
-            listaErrores.appendChild(item);
-            item.innerHTML("Ingrese una dirección de mail valida.");
-        */    console.log("Email invalido");
+            let item = document.createElement("li");
+            divErrorMail.appendChild(item);
+            item.innerText = "Ingrese una dirección de mail valida.";
+            console.log("Email invalido");
             email.classList.add("error");
+            email.focus();
         }
         if (mensaje.value.trim() == "") {
             sinError = false;
-   /*         let item = document.createElement("li");
-            listaErrores.appendChild(item);
-            item.innerHTML("Ingrese un mensaje para comunicarse con nosotros.");
-     */       console.log("Mensaje invalido");
+            let item = document.createElement("li");
+            divErrorMens.appendChild(item);
+            item.innerText = "Deje un mensaje para comunicarse con nosotros.";
+            console.log("Mensaje invalido");
             mensaje.classList.add("error");
+            mensaje.focus();
         }
         if (sinError) {
             alert('Muchas gracias por su consulta, responderemos a la brevedad.\n¡Que tenga miau buenos días!')
