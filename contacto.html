@@ -38,6 +38,9 @@
         <form onsubmit="return validar()">
 
             <label for="nombre">Nombre: </label><br>
+
+            <label id="lbErrorNom" for="">a</label>
+
             <input type="text" id="nombre" name="nombre"><br><br>
             <label for="email">Correo Electronico: </label><br>
             <input type="text" id="email"><br><br>
@@ -46,7 +49,6 @@
                 rows="10">¡Hola! Quisiera adoptar a uno de sus gatos</textarea><br><br>
             <input class="submit" type="submit" value="Enviar">
         </form>
-
 
     </section>
 
@@ -85,39 +87,45 @@
 </body>
 <script>
     function validar() {
+
         let sinError = true;
         let nombre = document.getElementById('nombre');
         let email = document.getElementById('email');
         let mensaje = document.getElementById('mensaje');
+        let lbErrorNom = document.getElementById('lbErrorNom');
+/*        let listaMensajes = document.getElementById('ltaMsjs');
+ */       listaErrores.innerHTML = '';
 
         nombre.classList.remove("error");
         mensaje.classList.remove("error");
         email.classList.remove("error");
         if (nombre.value == "") {
             sinError = false;
-            alert('Por favor ingrese un nombre para comunicarnos con usted');
+            /*    let item = document.createElement("li");
+                  item.innerText('Ingrese un nombre.');
+                listaErrores.appendChild(item);*/
+            lbErrorNom.innerHTML = "Ingrese un nombre";
+            console.log("Nombre invalido");
             nombre.classList.add("error");
-            nombre.focus();
         }
 
-        let arroba = /@/;
-        let puntocom = /.com/;
-        let puntoedu = /.edu/;
-        let puntonet = /.net/;
-        let puntoar = /.ar/;
+        let valMail = /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
-        if (email.value.trim() == "" || !arroba.test(email.value) || !puntocom.test(email.value) && !puntonet.test(email.value) && !puntoedu.test(email.value) && !puntoar.test(email.value)) {
+        if (!valMail.test(email.value)) {
             sinError = false;
-            alert('Ingrese una direccion de email valida');
+      /*      let item = document.createElement("li");
+            listaErrores.appendChild(item);
+            item.innerHTML("Ingrese una dirección de mail valida.");
+        */    console.log("Email invalido");
             email.classList.add("error");
-            email.focus();
         }
-
         if (mensaje.value.trim() == "") {
             sinError = false;
-            alert('Por favor ingrese un mensaje para comunicarnos con usted');
+   /*         let item = document.createElement("li");
+            listaErrores.appendChild(item);
+            item.innerHTML("Ingrese un mensaje para comunicarse con nosotros.");
+     */       console.log("Mensaje invalido");
             mensaje.classList.add("error");
-            mensaje.focus();
         }
         if (sinError) {
             alert('Muchas gracias por su consulta, responderemos a la brevedad.\n¡Que tenga miau buenos días!')
