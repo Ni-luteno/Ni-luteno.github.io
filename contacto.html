@@ -136,11 +136,11 @@
             email.classList.add("error");
             email.focus();
         }
-        if (mensaje.value.trim() == "") {
+        if (mensaje.value.trim() == "" || mensaje.value.length > 300) {
             sinError = false;
             let item = document.createElement("li");
             divErrorMens.appendChild(item);
-            item.innerText = "Deje un mensaje para comunicarse con nosotros.";
+            item.innerText = "Deje un mensaje por favor. \n300 caracteres maximo.";
             console.log("Mensaje invalido");
             mensaje.classList.add("error");
             mensaje.focus();
