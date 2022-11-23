@@ -42,7 +42,6 @@ footer div {
 /*Contenedor gral*/
 
 main>div {
-    /* border: 2px aquamarine solid; */
     min-height: 180px;
     margin: 0rem;
     height: auto;
@@ -51,7 +50,6 @@ main>div {
 }
 
 main>aside {
-    /* border: 2px aquamarine solid; */
     min-height: 180px;
     min-width: 30%;
     margin: 0.5rem;
@@ -60,14 +58,12 @@ main>aside {
 }
 
 .seccion {
-    /* border: 2px blueviolet solid; */
     min-height: 50px;
     margin: 0.5rem;
 }
 
 
 .seccion article {
-    /* border: 2px blue solid; */
     margin: 0.5rem;
     min-height: 20px;
 }
@@ -109,7 +105,6 @@ main>aside {
 .adopcion a {
     text-decoration: none;
     position: relative;
-    /* border: 2px blue solid; */
     min-height: 100px;
     min-width: 100px;
     align-self: center;

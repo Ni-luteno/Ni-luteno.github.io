@@ -58,7 +58,7 @@
             <br>
 
             <textarea name="mensaje" id="mensaje" cols="30"
-                rows="10">¡Hola! Quisiera adoptar a uno de sus gatos</textarea><br><br>
+                rows="10">¡Hola! Quisiera adoptar a uno de sus gatos...</textarea><br><br>
             <input class="submit" type="submit" value="Enviar">
         </form>
 
@@ -147,6 +147,7 @@
         }
         if (sinError) {
             alert('Muchas gracias por su consulta, responderemos a la brevedad.\n¡Que tenga miau buenos días!')
+            console.log("Formulario enviado");
         }
         return sinError;
     }
