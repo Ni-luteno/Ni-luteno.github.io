@@ -1,5 +1,5 @@
 /* CARROUSEL  */
-var imagenes = ['Carrousel/img1.webp', 'Carrousel/img2.webp', 'Carrousel/img3.webp', 'Carrousel/img4.webp', 'Carrousel/img5.webp', 'Carrousel/img6.webp', 'Carrousel/img7.webp', 'Carrousel/img8.webp'],
+let imagenes = ['Carrousel/img1.webp', 'Carrousel/img2.webp', 'Carrousel/img3.webp', 'Carrousel/img4.webp', 'Carrousel/img5.webp', 'Carrousel/img6.webp', 'Carrousel/img7.webp', 'Carrousel/img8.webp'],
     cont = 0;
 function carrousel(contenedorCarrousel) {
 
@@ -19,7 +19,6 @@ function carrousel(contenedorCarrousel) {
                 img.src = imagenes[imagenes.length - 1];
                 cont = imagenes.length - 1;
             }
-
 
         } else if (tgt == adelante) {
             if (cont < imagenes.length - 1) {

@@ -27,49 +27,60 @@
     </header>
 
 
-    <div class="tituloIntermedio">
+    <div class="flex centrado">
         <u>
             <h2>Dejanos tu mensaje</h2>
         </u>
 
     </div>
-    <section class="seccion contacto flex">
+    <section class="seccion contacto flex centrado">
 
         <form onsubmit="return validar()">
 
             <label for="nombre">Nombre: </label>
             <br>
             <div id="divErrorNom">
-
             </div><br>
 
-            <input type="text" id="nombre" name="nombre"><br><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
             <label for="email">Correo Electronico: </label><br>
             <div id="divErrorMail">
 
             </div>
             <br>
 
-            <input type="text" id="email"><br><br>
+            <input type="text" id="email" placeholder="Ejemplo@mail.com"><br><br>
             <label for="mensaje">¡Dejanos tu mensaje!</label><br>
             <div id="divErrorMens">
 
             </div>
             <br>
 
-            <textarea name="mensaje" id="mensaje" cols="30"
-                rows="10">¡Hola! Quisiera adoptar a uno de sus gatos...</textarea><br><br>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                placeholder="¡Hola! Quisiera adoptar a uno de sus gatos..."></textarea><br><br>
             <input class="submit" type="submit" value="Enviar">
         </form>
 
     </section>
 
+    <div class="flex" style="min-height:100px; padding:20px;">
+
+        <ul id="ulFormEnviado" style="list-style-type: square;">
+
+
+        </ul>
+
+    </div>
 
     <footer>
         <hr>
-        <article>
+        <div class="f-left" style="min-width:22%;">
+            <p style="margin:12px; padding-bottom: 20px; padding-top: 10px;">Política de privacidad</p>
+            <p style="margin:12px ;">Términos y condiciones</p>
+        </div>
+        <div>
             <div class="seccionDropDown f-right">
-                <div class="dropdown f-right">
+                <div class="dropdown">
                     <button class="dropdown-btn"> ¡Seguinos!</button>
                     <div class="dropdown-content">
                         <a href="https://www.facebook.com/" target="_blank"><img
@@ -82,75 +93,82 @@
                 </div>
 
             </div>
-            <img class="f-right" src="Gatitos/icons8-trasero-de-gato-100.png" alt="">
-        </article>
 
+        </div>
+        <img class="f-right" src="Gatitos/icons8-trasero-de-gato-100.png" alt="">
         <div class="flex centrado">
             <img src="IconsRedesSociales/icons8-copyright-all-rights-reserved-96.png" alt="">
             2022-3022 DMICHIS S.A.
         </div>
         <hr>
-
-        <div class="flex f-left">
-            <p style="margin:12px ;">Política de privacidad</p>
-            <p style="margin:12px ;">Términos y condiciones</p>
-        </div>
     </footer>
+    <script>
+        function validar() {
+
+            let sinError = true;
+            let nombre = document.getElementById('nombre');
+            let email = document.getElementById('email');
+            let mensaje = document.getElementById('mensaje');
+            let divErrorNom = document.getElementById('divErrorNom');
+            let divErrorMail = document.getElementById('divErrorMail');
+            let divErrorMens = document.getElementById('divErrorMens');
+            let ulFormEnviado = document.getElementById('ulFormEnviado');
+
+            divErrorMail.innerHTML = "";
+            divErrorNom.innerHTML = "";
+            divErrorMens.innerHTML = "";
+            ulFormEnviado.innerHTML = "";
+            nombre.classList.remove("error");
+            mensaje.classList.remove("error");
+            email.classList.remove("error");
+
+            if (nombre.value == "") {
+                sinError = false;
+                let item = document.createElement("li");
+                divErrorNom.appendChild(item);
+                item.innerText = "Ingrese un nombre.";
+                console.log("Nombre invalido");
+                nombre.classList.add("error");
+                nombre.focus();
+            }
+
+            let valMail = /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+
+            if (!valMail.test(email.value)) {
+                sinError = false;
+                let item = document.createElement("li");
+                divErrorMail.appendChild(item);
+                item.innerText = "Ingrese una dirección de mail valida.";
+                console.log("Email invalido");
+                email.classList.add("error");
+                email.focus();
+            }
+            if (mensaje.value.trim() == "" || mensaje.value.length > 300) {
+                sinError = false;
+                let item = document.createElement("li");
+                divErrorMens.appendChild(item);
+                item.innerText = "Deje un mensaje por favor. \n300 caracteres maximo.";
+                console.log("Mensaje invalido");
+                mensaje.classList.add("error");
+                mensaje.focus();
+            }
+            if (sinError) {
+                let item = document.createElement("li");
+                ulFormEnviado.appendChild(item);
+                item.innerText = "Nombre: " + nombre.value;
+                item = document.createElement("li");
+                ulFormEnviado.appendChild(item);
+                item.innerText = "Mail: " + email.value;
+                item = document.createElement("li");
+                ulFormEnviado.appendChild(item);
+                item.innerText = "Mensaje: " + mensaje.value;
+                alert('Muchas gracias por su consulta, responderemos a la brevedad.\n¡Que tenga miau buenos días!')
+                console.log("Formulario enviado");
+            }
+            return false;
+        }
+    </script>
 </body>
-<script>
-    function validar() {
 
-        let sinError = true;
-        let nombre = document.getElementById('nombre');
-        let email = document.getElementById('email');
-        let mensaje = document.getElementById('mensaje');
-        let divErrorNom = document.getElementById('divErrorNom');
-        let divErrorMail = document.getElementById('divErrorMail');
-        let divErrorMens = document.getElementById('divErrorMens');
-
-        divErrorMail.innerHTML = "";
-        divErrorNom.innerHTML = "";
-        divErrorMens.innerHTML = "";
-        nombre.classList.remove("error");
-        mensaje.classList.remove("error");
-        email.classList.remove("error");
-
-        if (nombre.value == "") {
-            sinError = false;
-            let item = document.createElement("li");
-            divErrorNom.appendChild(item);
-            item.innerText = "Ingrese un nombre.";
-            console.log("Nombre invalido");
-            nombre.classList.add("error");
-            nombre.focus();
-        }
-
-        let valMail = /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-
-        if (!valMail.test(email.value)) {
-            sinError = false;
-            let item = document.createElement("li");
-            divErrorMail.appendChild(item);
-            item.innerText = "Ingrese una dirección de mail valida.";
-            console.log("Email invalido");
-            email.classList.add("error");
-            email.focus();
-        }
-        if (mensaje.value.trim() == "" || mensaje.value.length > 300) {
-            sinError = false;
-            let item = document.createElement("li");
-            divErrorMens.appendChild(item);
-            item.innerText = "Deje un mensaje por favor. \n300 caracteres maximo.";
-            console.log("Mensaje invalido");
-            mensaje.classList.add("error");
-            mensaje.focus();
-        }
-        if (sinError) {
-            alert('Muchas gracias por su consulta, responderemos a la brevedad.\n¡Que tenga miau buenos días!')
-            console.log("Formulario enviado");
-        }
-        return sinError;
-    }
-</script>
 
 </html>

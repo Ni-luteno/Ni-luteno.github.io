@@ -13,7 +13,6 @@ body,
 header,
 main,
 footer {
-    /* border: 3px purple solid; */
     min-height: 50px;
     margin: 0.5rem;
     min-width: 400px;
@@ -62,20 +61,9 @@ main>aside {
     margin: 0.5rem;
 }
 
-
 .seccion article {
     margin: 0.5rem;
     min-height: 20px;
-}
-
-
-.tituloIntermedio {
-    display: flex;
-    justify-content: center;
-}
-
-.tituloIntermedio h1 {
-    margin: 16px;
 }
 
 
@@ -114,11 +102,16 @@ main>aside {
 
 .adopcion article {
     min-width: 800px;
+    padding-left: 5%;
 }
 
 .adopcion img:hover {
     cursor: pointer;
     transform: scale(1.02, 1.02);
+}
+
+.contenedor-div {
+    padding-left: 10%;
 }
 
 /* HEADER */
@@ -139,7 +132,6 @@ header {
 }
 
 .header-menu ul li {
-
     background-color: #444;
     float: left;
     overflow: hidden;
@@ -188,8 +180,9 @@ header {
 
 .traslucid {
     border-radius: 5px;
-    background-color: rgba(248, 248, 255, 0.33);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    color: rgba(248, 248, 255);
 }
 
 .box {
@@ -209,10 +202,9 @@ header {
 
 .seccionDropDown {
     min-height: 70px;
+    min-width: 250px;
     margin: 0.5rem;
     width: auto;
-    float: left;
-
 }
 
 .dropdown-content {
@@ -244,6 +236,7 @@ header {
 
 .dropdown:hover .dropdown-btn {
     background-color: #256f27;
+
 }
 
 .dropdown:hover .dropdown-content {
@@ -300,10 +293,6 @@ header {
 
 /* FORM CONTACTO */
 
-.contacto {
-    justify-content: center;
-}
-
 .contacto input {
     min-width: 350px;
     min-height: 30px;
@@ -335,6 +324,21 @@ textarea.error {
 
 .contacto label {
     display: block;
+}
+
+#divErrorNom {
+    color: red;
+    text-shadow: 0.5px 0.5px 0.75px black;
+}
+
+#divErrorMail {
+    color: red;
+    text-shadow: 0.5px 0.5px 0.75px black;
+}
+
+#divErrorMens {
+    color: red;
+    text-shadow: 0.5px 0.5px 0.75px black;
 }
 
 /* VARIOS */
