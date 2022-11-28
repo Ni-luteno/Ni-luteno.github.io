@@ -1,3 +1,4 @@
+/*Contenedor gral*/
 * {
     box-sizing: border-box;
 }
@@ -7,7 +8,6 @@ html {
     height: 100%;
     background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%) fixed;
 }
-
 
 body,
 header,
@@ -29,16 +29,6 @@ main {
     overflow: auto;
 
 }
-
-footer {
-    min-height: 140px;
-}
-
-footer div {
-    font-size: 12px;
-}
-
-/*Contenedor gral*/
 
 main>div {
     min-height: 180px;
@@ -64,54 +54,6 @@ main>aside {
 .seccion article {
     margin: 0.5rem;
     min-height: 20px;
-}
-
-
-/* Seccion Adopcion */
-
-.adopcion .boton {
-    font-size: 30px;
-    width: 100px;
-    height: 100px;
-    line-height: 0px;
-    border-radius: 50%;
-    background-image: url(Gatitos/icons8-perfil-de-gato-100.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    font-weight: bold;
-    position: relative;
-    align-self: center;
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0px rgb(255, 255, 255, .6);
-    -webkit-transition: all .3% ease;
-    -o-transition: all .3% ease;
-    transition: all .3% ease;
-}
-
-.adopcion a {
-    text-decoration: none;
-    position: relative;
-    min-height: 100px;
-    min-width: 100px;
-    align-self: center;
-    justify-items: center;
-    justify-content: center;
-}
-
-.adopcion article {
-    min-width: 800px;
-    padding-left: 5%;
-}
-
-.adopcion img:hover {
-    cursor: pointer;
-    transform: scale(1.02, 1.02);
-}
-
-.contenedor-div {
-    padding-left: 10%;
 }
 
 /* HEADER */
@@ -162,40 +104,14 @@ header {
     border-radius: 100%;
 }
 
-/* Cajas primer Div */
+/*FOOTER */
 
-.fondo-inicio {
-    background-image: url(Carrousel/fondo1.webp);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    min-height: 350px;
+footer {
+    min-height: 140px;
 }
 
-.contenido-div {
-    background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%);
-
-}
-
-.traslucid {
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    color: rgba(248, 248, 255);
-}
-
-.box {
-    padding: 10px 15px;
-    margin: 10px 15px;
-    width: 23%;
-    text-align: center;
-    transition: 0.2s;
-}
-
-.box:hover {
-    scale: 1.05 1.05;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+footer div {
+    font-size: 12px;
 }
 
 /* Dropdown Redes Sociales*/
@@ -241,6 +157,42 @@ header {
 
 .dropdown:hover .dropdown-content {
     display: flex;
+}
+
+/* Cajas primer Div */
+
+.fondo-inicio {
+    background-image: url(Carrousel/fondo1.webp);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 350px;
+}
+
+.contenido-div {
+    background: linear-gradient(167deg, rgba(255, 245, 229, 0.9668242296918768) 0%, rgba(255, 145, 19, 0.8008580141040791) 52%, rgba(236, 187, 132, 0.773546918767507) 100%, rgba(230, 96, 128, 1) 100%);
+
+}
+
+.traslucid {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    color: rgba(248, 248, 255);
+}
+
+.box {
+    padding: 10px 15px;
+    margin: 10px 15px;
+    width: 23%;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.box:hover {
+    scale: 1.05 1.05;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Carrousel */
@@ -289,6 +241,53 @@ header {
 .adelante {
     right: 2%;
     top: calc(50% - 70px);
+}
+
+/* Seccion Adopcion */
+
+.adopcion .boton {
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+    line-height: 0px;
+    border-radius: 50%;
+    background-image: url(Gatitos/icons8-perfil-de-gato-100.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0px rgb(255, 255, 255, .6);
+    -webkit-transition: all .3% ease;
+    -o-transition: all .3% ease;
+    transition: all .3% ease;
+}
+
+.adopcion a {
+    text-decoration: none;
+    position: relative;
+    min-height: 100px;
+    min-width: 100px;
+    align-self: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.adopcion article {
+    min-width: 800px;
+    padding-left: 5%;
+}
+
+.adopcion img:hover {
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+}
+
+.contenedor-div {
+    padding-left: 10%;
 }
 
 /* FORM CONTACTO */
